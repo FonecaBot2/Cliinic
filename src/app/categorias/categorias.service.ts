@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Categoria, getCategorias } from './categoria.model';
-import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { Observable, tap } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -20,5 +20,9 @@ export class CategoriasService {
     return this.http.post<Categoria>(
       'https://equipoyosh.com/stock-nutrinatalia/categoria', {descripcion: categoria}
     );
+  }
+
+  deleteCategoria(id: number): Observable<Categoria> {
+    return this.http.delete<Categoria>(`https://equipoyosh.com/stock-nutrinatalia/categoria/${id}`);
   }
 }

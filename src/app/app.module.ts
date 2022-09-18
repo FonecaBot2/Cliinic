@@ -19,9 +19,11 @@ import { FichaClinicaComponent } from './ficha-clinica/ficha-clinica.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ConfirmationDialog } from './shared/confirm-delete.component';
 
 @NgModule({
-  declarations: [AppComponent, CategoriasComponent, CrearCategoriasComponent, SubcategoriasComponent, ServiciosComponent, PacientesComponent, HorariosComponent, HorariosExcepcionComponent, ReservasComponent, FichaClinicaComponent],
+  declarations: [AppComponent, CategoriasComponent, CrearCategoriasComponent, SubcategoriasComponent, ServiciosComponent, PacientesComponent, HorariosComponent, HorariosExcepcionComponent, ReservasComponent, FichaClinicaComponent, ConfirmationDialog],
   imports: [
     BrowserModule,
     MatTableModule,
@@ -31,7 +33,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     RouterModule,
     AppRoutingModule,
     MatFormFieldModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent, CategoriasComponent],
