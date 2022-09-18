@@ -1,17 +1,17 @@
 <mat-toolbar color="primary" *ngIf="logged === 'true'">
     <mat-toolbar-row>
       <div fxFlex>
-        <a mat-button [routerLink]="['/','categorias']"> Categorias</a>
-        <a mat-button [routerLink]="['/','subcategorias']"> Subcategorías </a>
-        <a mat-button [routerLink]="['/','servicios']"> Servicios </a>
-        <a mat-button [routerLink]="['/','pacientes']"> Pacientes </a>
-        <a mat-button [routerLink]="['/','reservas']"> Reservas </a>
-        <a mat-button [routerLink]="['/','fichas-clinicas']"> Fichas Clinicas </a>
-        <a mat-button [routerLink]="['/','horarios']"> Horarios </a>
-        <a mat-button [routerLink]="['/','horarios-excepcion']"> Horarios Excepción </a>
+        <a mat-button [routerLink]="['/','categorias']" (click)="reloadPage()"> Categorias</a>
+        <a mat-button [routerLink]="['/','subcategorias']" (click)="reloadPage()"> Subcategorías </a>
+        <a mat-button [routerLink]="['/','servicios']" (click)="reloadPage()"> Servicios </a>
+        <a mat-button [routerLink]="['/','pacientes']" (click)="reloadPage()"> Pacientes </a>
+        <a mat-button [routerLink]="['/','reservas']" (click)="reloadPage()"> Reservas </a>
+        <a mat-button [routerLink]="['/','fichas-clinicas']" (click)="reloadPage()"> Fichas Clinicas </a>
+        <a mat-button [routerLink]="['/','horarios']" (click)="reloadPage()"> Horarios </a>
+        <a mat-button [routerLink]="['/','horarios-excepcion']" (click)="reloadPage()"> Horarios Excepción </a>
       </div>
       <div fxFlex fxLayoutAlign="flex-end center">
-        <a mat-button [routerLink]="['/','logout']"><strong>Cerrar Sesión</strong></a>
+        <a mat-button [routerLink]="['/','logout']" (click)="reloadPage()"><strong>Cerrar Sesión</strong></a>
       </div>
     </mat-toolbar-row>
 </mat-toolbar>

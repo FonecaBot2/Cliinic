@@ -48,7 +48,9 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('NombreUsuario', element.email);
         localStorage.setItem('usuarioId', element.idPersona)
         localStorage.setItem('logged', 'true')
-        this.router.navigateByUrl('categorias');
+        this.router.navigateByUrl('categorias').then(() => setTimeout(()=>{
+          window.location.reload();
+        }, 100));
         return
       }
     }
