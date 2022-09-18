@@ -10,7 +10,7 @@ export class LogoutComponent implements OnInit {
   nombreUsuario: string;
 
   constructor(private router:Router) {
-    this.nombreUsuario = localStorage.getItem('usuarioNombre')
+    this.nombreUsuario = localStorage.getItem('NombreUsuario');
    }
 
   ngOnInit(): void {

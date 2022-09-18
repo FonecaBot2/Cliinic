@@ -32,9 +32,9 @@ export class LoginComponent implements OnInit {
   }
   constructor(private pacientesService: PacientesService, private router: Router) {
     const aux = localStorage.getItem('logged');
-    // if (aux){
-    //   this.router.navigateByUrl('categorias');
-    // }
+    if (aux === 'true'){
+       this.router.navigateByUrl('categorias');
+    }
   }
 
   async login(){

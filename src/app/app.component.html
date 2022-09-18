@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" *ngIf="logged === 'true'">
     <mat-toolbar-row>
       <div fxFlex>
         <a mat-button [routerLink]="['/','categorias']"> Categorias</a>
