@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from './categoria.model';
 import { CategoriasService } from './categorias.service';
 
@@ -22,7 +23,7 @@ export class CategoriasComponent {
     this.dataSource.sort = this.sort;
   }
 
-  constructor(private categoriasService: CategoriasService) {}
+  constructor(private categoriasService: CategoriasService, private route: ActivatedRoute, private router: Router ) {}
 
   ngOnInit() {
     this.dataSource.sortingDataAccessor = (item, property) => {

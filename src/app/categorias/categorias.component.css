@@ -8,3 +8,7 @@
     overflow: auto;
     max-height: 500px;
 }
+
+.mat-button{
+    margin: 8px 8px 8px 0;
+}
