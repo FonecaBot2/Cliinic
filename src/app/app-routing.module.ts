@@ -8,6 +8,7 @@ import { HorariosComponent } from './horarios/horarios.component';
 import { PacientesComponent } from './pacientes/pacientes.component';
 import { ReservasComponent } from './reservas/reservas.component';
 import { ServiciosComponent } from './servicios/servicios.component';
+import { CrearSubcategoriaComponent } from './subcategorias/crear-subcategoria/crear-subcategoria.component';
 import { SubcategoriasComponent } from './subcategorias/subcategorias.component';
 
 
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'subcategorias',
     component: SubcategoriasComponent
+  },
+  {
+    path: 'crear-subcategoria',
+    component: CrearSubcategoriaComponent
   },
   {
     path: 'pacientes',
