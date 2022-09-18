@@ -21,16 +21,26 @@ export class ReservasComponent implements OnInit {
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+    this.dataSource.filterPredicate = (data : Reserva, filter: string) => {
+      return data.idEmpleado.nombre == filter || data.idCliente.nombre == filter;
+    };
   }
 
   constructor(private service: ReservasService) {}
 
   ngOnInit() {
     this.get();
+    
   }
 
   get(): void {
     this.service.get().subscribe(data=> this.dataSource.data = data.lista);
+  }
+
+  applyFilter(filterValue: string) {
+    //filterValue = filterValue.trim(); // Remove whitespace
+    //filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
+    this.dataSource.filter = filterValue;
   }
 
 }

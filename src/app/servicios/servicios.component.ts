@@ -21,6 +21,9 @@ export class ServiciosComponent implements OnInit {
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+    this.dataSource.filterPredicate = (data : Servicio, filter: String) => {
+      return data.idEmpleado.nombre == filter || data.idFichaClinica.idCliente.nombre == filter;
+    };
   }
 
   constructor(private serviciosService: ServiciosService) {}
@@ -31,5 +34,11 @@ export class ServiciosComponent implements OnInit {
 
   getSubategorias(): void {
     this.serviciosService.getServicios().subscribe(servicios=> this.dataSource.data = servicios.lista);
+  }
+
+  applyFilter(filterValue: string) {
+    //filterValue = filterValue.trim(); // Remove whitespace
+    //filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
+    this.dataSource.filter = filterValue;
   }
 }

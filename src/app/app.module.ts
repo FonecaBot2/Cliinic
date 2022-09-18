@@ -17,6 +17,8 @@ import { HorariosExcepcionComponent } from './horarios-excepcion/horarios-excepc
 import { ReservasComponent } from './reservas/reservas.component';
 import { FichaClinicaComponent } from './ficha-clinica/ficha-clinica.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [AppComponent, CategoriasComponent, CrearCategoriasComponent, SubcategoriasComponent, ServiciosComponent, PacientesComponent, HorariosComponent, HorariosExcepcionComponent, ReservasComponent, FichaClinicaComponent],
@@ -27,7 +29,9 @@ import { AppRoutingModule } from './app-routing.module';
     MaterialModule,
     HttpClientModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent, CategoriasComponent],
