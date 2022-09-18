@@ -6,6 +6,7 @@ import { FichaClinicaComponent } from './ficha-clinica/ficha-clinica.component';
 import { HorariosExcepcionComponent } from './horarios-excepcion/horarios-excepcion.component';
 import { HorariosComponent } from './horarios/horarios.component';
 import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 import { CrearPacienteComponent } from './pacientes/crear-paciente/crear-paciente.component';
 import { PacientesComponent } from './pacientes/pacientes.component';
 import { ReservasComponent } from './reservas/reservas.component';
@@ -62,6 +63,10 @@ const routes: Routes = [
   {
     path: 'servicios',
     component: ServiciosComponent
+  },
+  {
+    path: 'logout',
+    component: LogoutComponent
   },
 ];
 

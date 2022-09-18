@@ -23,9 +23,10 @@ import { ConfirmationDialog } from './shared/confirm-delete.component';
 import { CrearSubcategoriaComponent } from './subcategorias/crear-subcategoria/crear-subcategoria.component';
 import { CrearPacienteComponent } from './pacientes/crear-paciente/crear-paciente.component';
 import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
-  declarations: [AppComponent, CategoriasComponent, CrearCategoriasComponent, SubcategoriasComponent, ServiciosComponent, PacientesComponent, HorariosComponent, HorariosExcepcionComponent, ReservasComponent, FichaClinicaComponent, ConfirmationDialog, CrearSubcategoriaComponent, CrearPacienteComponent, LoginComponent],
+  declarations: [AppComponent, CategoriasComponent, CrearCategoriasComponent, SubcategoriasComponent, ServiciosComponent, PacientesComponent, HorariosComponent, HorariosExcepcionComponent, ReservasComponent, FichaClinicaComponent, ConfirmationDialog, CrearSubcategoriaComponent, CrearPacienteComponent, LoginComponent, LogoutComponent],
   imports: [
     BrowserModule,
     MatTableModule,

@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <div>
+      <div fxFlex>
         <a mat-button [routerLink]="['/','categorias']"> Categorias</a>
         <a mat-button [routerLink]="['/','subcategorias']"> Subcategorías </a>
         <a mat-button [routerLink]="['/','servicios']"> Servicios </a>
@@ -9,6 +9,9 @@
         <a mat-button [routerLink]="['/','fichas-clinicas']"> Fichas Clinicas </a>
         <a mat-button [routerLink]="['/','horarios']"> Horarios </a>
         <a mat-button [routerLink]="['/','horarios-excepcion']"> Horarios Excepción </a>
+      </div>
+      <div fxFlex fxLayoutAlign="flex-end center">
+        <a mat-button [routerLink]="['/','logout']"><strong>Cerrar Sesión</strong></a>
       </div>
     </mat-toolbar-row>
 </mat-toolbar>
