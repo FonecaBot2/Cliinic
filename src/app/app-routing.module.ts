@@ -5,6 +5,7 @@ import { CrearCategoriasComponent } from './categorias/crear-categorias/crear-ca
 import { FichaClinicaComponent } from './ficha-clinica/ficha-clinica.component';
 import { HorariosExcepcionComponent } from './horarios-excepcion/horarios-excepcion.component';
 import { HorariosComponent } from './horarios/horarios.component';
+import { LoginComponent } from './login/login.component';
 import { CrearPacienteComponent } from './pacientes/crear-paciente/crear-paciente.component';
 import { PacientesComponent } from './pacientes/pacientes.component';
 import { ReservasComponent } from './reservas/reservas.component';
@@ -16,7 +17,7 @@ import { SubcategoriasComponent } from './subcategorias/subcategorias.component'
 const routes: Routes = [
   {
     path: '',
-    component: CategoriasComponent
+    component: LoginComponent
   },
   {
     path: 'categorias',
