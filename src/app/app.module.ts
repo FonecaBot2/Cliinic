@@ -37,6 +37,6 @@ import { ConfirmationDialog } from './shared/confirm-delete.component';
     MatDialogModule,
   ],
   providers: [],
-  bootstrap: [AppComponent, CategoriasComponent],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
