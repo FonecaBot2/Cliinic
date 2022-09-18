@@ -1,1 +1,25 @@
-<p>subcategorias works!</p>
+<div class="container mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+     <ng-container matColumnDef="idProducto">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID</th>
+        <td mat-cell *matCellDef="let subcategoria"> {{subcategoria.idTipoProducto}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="descripcion">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Descripcion </th>
+        <td mat-cell *matCellDef="let subcategoria"> {{subcategoria.descripcion}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="opciones">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let categoria"></td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+    <mat-paginator [pageSizeOptions]="[10, 20]"
+                   showFirstLastButtons 
+  >
+    </mat-paginator>
+  </div>

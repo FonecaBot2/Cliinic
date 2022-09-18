@@ -1,0 +1,56 @@
+<div class="container mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Nombre</th>
+        <td mat-cell *matCellDef="let paciente"> {{paciente.nombre}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="apellido">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Apellido</th>
+        <td mat-cell *matCellDef="let paciente"> {{paciente.apellido}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Email</th>
+        <td mat-cell *matCellDef="let paciente"> {{paciente.email}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="telefono">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Telefono</th>
+        <td mat-cell *matCellDef="let paciente"> {{paciente.telefono}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="ruc">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>RUC</th>
+        <td mat-cell *matCellDef="let paciente"> {{paciente.ruc}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="cedula">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Cedula</th>
+        <td mat-cell *matCellDef="let paciente"> {{paciente.cedula }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="tipoPersona">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Tipo persona</th>
+        <td mat-cell *matCellDef="let paciente"> {{paciente.tipoPersona }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="fechaNacimiento">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Fecha de nacimiento</th>
+        <td mat-cell *matCellDef="let paciente"> {{paciente.fechaNacimiento}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="opciones">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let categoria"></td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+    <mat-paginator [pageSizeOptions]="[10, 20]"
+                   showFirstLastButtons 
+  >
+    </mat-paginator>
+  </div>
+

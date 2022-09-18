@@ -1,14 +1,15 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
       <div>
-        <a mat-button > Categorias</a>
-        <a mat-button > Create Account </a>
-        <a mat-button > Contacts </a>
-        <a mat-button > Create Contact </a>
-        <a mat-button > Activities </a>
-        <a mat-button > Create Activity </a>
+        <a mat-button [routerLink]="['/','categorias']"> Categorias</a>
+        <a mat-button [routerLink]="['/','subcategorias']"> Subcategorías </a>
+        <a mat-button [routerLink]="['/','servicios']"> Servicios </a>
+        <a mat-button [routerLink]="['/','pacientes']"> Pacientes </a>
+        <a mat-button [routerLink]="['/','reservas']"> Reservas </a>
+        <a mat-button [routerLink]="['/','fichas-clinicas']"> Fichas Clinicas </a>
+        <a mat-button [routerLink]="['/','horarios']"> Horarios </a>
+        <a mat-button [routerLink]="['/','horarios-excepcion']"> Horarios Excepción </a>
       </div>
     </mat-toolbar-row>
 </mat-toolbar>
-<app-categorias></app-categorias>
-
+<router-outlet></router-outlet>

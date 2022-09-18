@@ -11,14 +11,14 @@ export class SubcategoriasService {
 
   constructor(private http: HttpClient) { }
 
-  getSubcategorias(subcategoria: Subcategoria): Observable<getSubcategorias> {
+  getSubcategorias(subcategoria?: Subcategoria): Observable<getSubcategorias> {
     return this.http.get<getSubcategorias>(
       'https://equipoyosh.com/stock-nutrinatalia/tipoProducto');
   }
 
   postCategorias(subcategoria: string): Observable<Subcategoria> {
     return this.http.post<Subcategoria>(
-      'https://equipoyosh.com/stock-nutrinatalia/categoria', {descripcion: subcategoria}
+      'https://equipoyosh.com/stock-nutrinatalia/tipoProducto', {descripcion: subcategoria}
     );
   }
 }

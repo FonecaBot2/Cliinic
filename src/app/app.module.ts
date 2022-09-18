@@ -10,9 +10,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { CrearCategoriasComponent } from './categorias/crear-categorias/crear-categorias.component';
 import { SubcategoriasComponent } from './subcategorias/subcategorias.component';
+import { ServiciosComponent } from './servicios/servicios.component';
+import { PacientesComponent } from './pacientes/pacientes.component';
+import { HorariosComponent } from './horarios/horarios.component';
+import { HorariosExcepcionComponent } from './horarios-excepcion/horarios-excepcion.component';
+import { ReservasComponent } from './reservas/reservas.component';
+import { FichaClinicaComponent } from './ficha-clinica/ficha-clinica.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  declarations: [AppComponent, CategoriasComponent, CrearCategoriasComponent, SubcategoriasComponent],
+  declarations: [AppComponent, CategoriasComponent, CrearCategoriasComponent, SubcategoriasComponent, ServiciosComponent, PacientesComponent, HorariosComponent, HorariosExcepcionComponent, ReservasComponent, FichaClinicaComponent],
   imports: [
     BrowserModule,
     MatTableModule,
@@ -20,6 +27,7 @@ import { SubcategoriasComponent } from './subcategorias/subcategorias.component'
     MaterialModule,
     HttpClientModule,
     RouterModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent, CategoriasComponent],
