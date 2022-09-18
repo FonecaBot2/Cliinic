@@ -4,6 +4,7 @@ import { CategoriasComponent } from './categorias/categorias.component';
 import { CrearCategoriasComponent } from './categorias/crear-categorias/crear-categorias.component';
 import { FichaClinicaComponent } from './ficha-clinica/ficha-clinica.component';
 import { HorariosExcepcionComponent } from './horarios-excepcion/horarios-excepcion.component';
+import { CrearHorarioComponent } from './horarios/crear-horario/crear-horario.component';
 import { HorariosComponent } from './horarios/horarios.component';
 import { CrearPacienteComponent } from './pacientes/crear-paciente/crear-paciente.component';
 import { PacientesComponent } from './pacientes/pacientes.component';
@@ -49,6 +50,10 @@ const routes: Routes = [
   {
     path: 'horarios',
     component: HorariosComponent
+  },
+  {
+    path: 'crear-horario',
+    component: CrearHorarioComponent
   },
   {
     path: 'horarios-excepcion',
