@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { MaterialModule } from 'src/environments/material.module';
 import { HttpClientModule } from '@angular/common/http';
-
 import { RouterModule } from '@angular/router';
 import { CrearCategoriasComponent } from './categorias/crear-categorias/crear-categorias.component';
 import { SubcategoriasComponent } from './subcategorias/subcategorias.component';
@@ -21,9 +20,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ConfirmationDialog } from './shared/confirm-delete.component';
+import { CrearSubcategoriaComponent } from './subcategorias/crear-subcategoria/crear-subcategoria.component';
 
 @NgModule({
-  declarations: [AppComponent, CategoriasComponent, CrearCategoriasComponent, SubcategoriasComponent, ServiciosComponent, PacientesComponent, HorariosComponent, HorariosExcepcionComponent, ReservasComponent, FichaClinicaComponent, ConfirmationDialog],
+  declarations: [AppComponent, CategoriasComponent, CrearCategoriasComponent, SubcategoriasComponent, ServiciosComponent, PacientesComponent, HorariosComponent, HorariosExcepcionComponent, ReservasComponent, FichaClinicaComponent, ConfirmationDialog, CrearSubcategoriaComponent],
   imports: [
     BrowserModule,
     MatTableModule,
@@ -37,6 +37,6 @@ import { ConfirmationDialog } from './shared/confirm-delete.component';
     MatDialogModule,
   ],
   providers: [],
-  bootstrap: [AppComponent, CategoriasComponent],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
