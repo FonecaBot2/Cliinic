@@ -36,4 +36,8 @@ export class PacientesService {
         tipoPersona: tipoPersona,
         fechaNacimiento: fechaNacimiento+" 00:00:00"});
   }
+  deletePacientes(id: number): Observable<Paciente> {
+    return this.http.delete<Paciente>(`https://equipoyosh.com/stock-nutrinatalia/persona/${id}`);
+  } 
+
 }
