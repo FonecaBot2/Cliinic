@@ -5,6 +5,7 @@ import { CrearCategoriasComponent } from './categorias/crear-categorias/crear-ca
 import { FichaClinicaComponent } from './ficha-clinica/ficha-clinica.component';
 import { HorariosExcepcionComponent } from './horarios-excepcion/horarios-excepcion.component';
 import { HorariosComponent } from './horarios/horarios.component';
+import { CrearPacienteComponent } from './pacientes/crear-paciente/crear-paciente.component';
 import { PacientesComponent } from './pacientes/pacientes.component';
 import { ReservasComponent } from './reservas/reservas.component';
 import { ServiciosComponent } from './servicios/servicios.component';
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'pacientes',
     component: PacientesComponent
+  },
+  {
+    path: 'crear-paciente',
+    component: CrearPacienteComponent
   },
   {
     path: 'reservas',

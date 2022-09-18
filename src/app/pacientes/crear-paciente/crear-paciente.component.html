@@ -1,0 +1,32 @@
+<div class="container">
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()" class="form">
+      <mat-form-field class="form-element">
+        <input matInput placeholder="nombre" formControlName="nombre" required>
+      </mat-form-field>
+      <mat-form-field class="form-element">
+         <input matInput placeholder="apellido" formControlName="apellido" required>
+      </mat-form-field>
+      <mat-form-field class="form-element">
+        <input matInput placeholder="email" formControlName="email" required>
+     </mat-form-field>
+     <mat-form-field class="form-element">
+        <input matInput placeholder="telefono" formControlName="telefono" required>
+     </mat-form-field>
+     <mat-form-field class="form-element">
+        <input matInput placeholder="RUC" formControlName="ruc" required>
+     </mat-form-field>
+     <mat-form-field class="form-element">
+        <input matInput placeholder="cedula" formControlName="cedula" required>
+     </mat-form-field>
+     <mat-form-field class="form-element">
+        <input matInput placeholder="tipo persona" formControlName="tipoPersona" required>
+     </mat-form-field>
+     <mat-form-field class="form-element">
+        <input matInput placeholder="fecha nacimiento" formControlName="fechaNacimiento" required>
+     </mat-form-field>
+    
+      <div class="form-element">
+        <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid">Agregar</button>
+      </div>
+    </form>
+</div>

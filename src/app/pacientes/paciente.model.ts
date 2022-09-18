@@ -7,7 +7,7 @@ export class Paciente {
     ruc: String;
     cedula: String;
     tipoPersona: String;
-    fechaNacimiento: String;
+    fechaNacimiento: Date;
 }
 
 export interface getPacientes{

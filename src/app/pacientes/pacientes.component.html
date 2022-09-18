@@ -3,7 +3,7 @@
     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtros">
   </mat-form-field>
 </div>
-
+<button id="basic" type="button" mat-button [routerLink]="['/','crear-paciente']">Agregar paciente</button>
 <div class="container mat-elevation-z8">
     <table mat-table [dataSource]="dataSource" matSort>
       <ng-container matColumnDef="nombre">
