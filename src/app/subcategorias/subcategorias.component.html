@@ -12,7 +12,9 @@
     
       <ng-container matColumnDef="opciones">
         <th mat-header-cell *matHeaderCellDef></th>
-        <td mat-cell *matCellDef="let categoria"></td>
+        <td mat-cell *matCellDef="let subcategoria">
+          <button mat-button (click)="openDialog(subcategoria.idTipoProducto)">Eliminar</button>
+        </td>
       </ng-container>
     
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

@@ -21,4 +21,9 @@ export class SubcategoriasService {
       'https://equipoyosh.com/stock-nutrinatalia/tipoProducto', {descripcion: subcategoria}
     );
   }
+
+  deleteSubcategoria(idTipoProducto: number): Observable<Subcategoria> {
+    return this.http.delete<Subcategoria>(`https://equipoyosh.com/stock-nutrinatalia/tipoProducto/${idTipoProducto}`);
+  }
+  
 }
