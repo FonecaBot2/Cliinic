@@ -14,7 +14,7 @@ export class HorarioAtencionService {
   }
 
   deleteHorario(id: number): Observable<HorarioAtencion> {
-    return this.http.delete<HorarioAtencion>(`https://equipoyosh.com/stock-nutrinatalia/personaHorarioAgenda/${id}`)
+    return this.http.delete<HorarioAtencion>(`https://equipoyosh.com/stock-nutrinatalia/personaHorarioAgenda/${id}`);
   }
 
 }
