@@ -1,6 +1,6 @@
 export class Servicio {
     idServicio: String;
-    idFichaClinica={
+    idFichaClinica!:{
       idFichaClinica: String,
       fechaHora : String,
       idCliente : {
@@ -16,7 +16,7 @@ export class Servicio {
       },
       observacion: String
     };
-    idEmpleado={
+    idEmpleado!:{
       idPersona : String,
       apellido : String,
       nombre : String,
