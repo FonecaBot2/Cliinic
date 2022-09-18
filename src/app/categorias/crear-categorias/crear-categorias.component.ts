@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CategoriasService } from '../categorias.service';
 
 @Component({
   selector: 'app-crear-categorias',
@@ -7,9 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrearCategoriasComponent implements OnInit {
 
-  constructor() { }
+  formGroup: FormGroup;
 
-  ngOnInit(): void {
+  constructor(private categoriasService: CategoriasService, private formBuilder: FormBuilder, private route: ActivatedRoute, private router: Router ) {}
+
+  ngOnInit() {
+    this.createForm();
   }
 
+  createForm() {
+    this.formGroup = this.formBuilder.group({
+      'descripcion': [null, Validators.required],
+    });
+  }
+
+  onSubmit() {
+    this.categoriasService.postCategorias(this.formGroup.value.descripcion).subscribe(data => console.log(data));
+    this.router.navigate(['../']);
+    
+  }
 }
+
+

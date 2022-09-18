@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CategoriasComponent } from './categorias/categorias.component';
+import { CrearCategoriasComponent } from './categorias/crear-categorias/crear-categorias.component';
 import { FichaClinicaComponent } from './ficha-clinica/ficha-clinica.component';
 import { HorariosExcepcionComponent } from './horarios-excepcion/horarios-excepcion.component';
 import { HorariosComponent } from './horarios/horarios.component';
@@ -17,7 +18,11 @@ const routes: Routes = [
   },
   {
     path: 'categorias',
-    component: CategoriasComponent
+    component: CategoriasComponent,
+  },
+  {
+    path: 'crear-categorias',
+    component: CrearCategoriasComponent,
   },
   {
     path: 'subcategorias',
